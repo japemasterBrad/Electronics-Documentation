@@ -100,5 +100,6 @@ if __name__ == "__main__":
     transistor = Button(bottom_row, text = "Transistor", command = transistor_button_press)
     transistor.pack(side = LEFT, padx=3, pady=1)
     
+    
     root.mainloop()
     

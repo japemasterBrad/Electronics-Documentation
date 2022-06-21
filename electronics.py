@@ -53,4 +53,5 @@ transistors = {
              "- Most basic type of transistor is the bipolar junction transistor\n\n"
 }
 
-welcome_message = "This mini documentation is to explain some of the core components used in electronics\n\n[] with <3 by Bradley"
+welcome_message = "This mini documentation is to explain some of the core components used in electronics\n\n[] with <3 by Bradley\n\n\n\n\n\n\n\n" \
+                  "Information referenced from www.energyeducation.ca/encyclopedia/Electrical_component"
