@@ -73,6 +73,8 @@ if __name__ == "__main__":
     
     info_display = Text(top_frame, wrap=WORD, width = 250, height = 15)
     info_display.pack()
+    info_display.delete(1.0, END)
+    info_display.insert("end -1 chars", welcome_message)
     
     wire = Button(top_row, text = "Wire", command = wire_button_press)
     wire.pack(side = LEFT, padx=3, pady=1)
