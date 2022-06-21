@@ -19,8 +19,6 @@ resistors = {
              "- Resistance of a resistor is measured in Ohms (Ω)\n\n" \
              "- They deliberately lose energy in the form of heat\n\n" \
              "- Appliances use resistors to lose energy in the form of heat" \
-
-# Resistors have a resistance from a few Ohms (Ω) to several Megaohms (MΩ = million Ohms). For more detailed information on resistors please see hyperphysics. An explanation of the colour code seen in figure 1 can be found here."
 }
 
 capacitors = {
@@ -28,7 +26,7 @@ capacitors = {
     "info" : "- Similar to batteries, in that they hold charge\n\n" \
              "- Used to regulate the voltage of a circuit\n\n" \
              "- Different Capacitance leads to different discharge rates\n\n"
-            }
+}
 
 light_bulbs = {
     "name" : "Light Bulb\n\n",
@@ -39,17 +37,6 @@ light_bulbs = {
              "   - CFL\n\n" \
              "   - Halogen\n\n"
 }
-
-# inductors = {
-#     "name" : "Inductor",
-#     "info" : "Wires are pieces of metal that transport electricity. They are usually flexible"
-#     "which makes them easier to use. These electrical conductors are key to all electrical"
-#     "devices, from the electric circuit board in a computer to the transformer in a neighborhood,"
-#     "or even the electrical transmission system carrying electric power hundreds of kilometers."
-#     "Without wires electricity would be unavailable for everyone, making them a necessary"
-#     "component to modern life. Depending on their purpose, wires can have varying sizes and"
-#     "compositions."
-# }
 
 diodes = {
     "name" : "Diode\n\n",
