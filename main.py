@@ -1,43 +1,57 @@
-from re import A
 from tkinter import *
-from webbrowser import BackgroundBrowser
-
-
-
-
-
-wires = {
-    "name" : "Wire\n",
-    "info" : "Wires are pieces of metal that transport electricity. They are usually flexible"
-    "which makes them easier to use. These electrical conductors are key to all electrical"
-    "devices, from the electric circuit board in a computer to the transformer in a neighborhood,"
-    "or even the electrical transmission system carrying electric power hundreds of kilometers."
-    "Without wires electricity would be unavailable for everyone, making them a necessary"
-    "component to modern life. Depending on their purpose, wires can have varying sizes and"
-    "compositions."
-}
-
-
+from electronics import *
 
 
 def wire_button_press():
     name = wires["name"]
     info = wires["info"]
-    print(name)
-    print(info)
+    info_display.delete(1.0, END)
+    info_display.insert("end -1 chars", str(name))
+    info_display.insert(3.0, str(info))
 
 
+def switch_button_press():
+    name = switches["name"]
+    info = switches["info"]
+    info_display.delete(1.0, END)
+    info_display.insert("end -1 chars", str(name))
+    info_display.insert(3.0, str(info))
+    
 
+def resistor_button_press():
+    name = resistors["name"]
+    info = resistors["info"]
+    info_display.delete(1.0, END)
+    info_display.insert("end -1 chars", str(name))
+    info_display.insert(3.0, str(info))    
 
+def capacitor_button_press():
+    name = capacitors["name"]
+    info = capacitors["info"]
+    info_display.delete(1.0, END)
+    info_display.insert("end -1 chars", str(name))
+    info_display.insert(3.0, str(info))    
 
+def light_bulb_button_press():
+    name = light_bulbs["name"]
+    info = light_bulbs["info"]
+    info_display.delete(1.0, END)
+    info_display.insert("end -1 chars", str(name))
+    info_display.insert(3.0, str(info))    
 
+def diode_button_press():
+    name = diodes["name"]
+    info = diodes["info"]
+    info_display.delete(1.0, END)
+    info_display.insert("end -1 chars", str(name))
+    info_display.insert(3.0, str(info))    
 
-
-
-
-
-
-
+def transistor_button_press():
+    name = transistors["name"]
+    info = transistors["info"]
+    info_display.delete(1.0, END)
+    info_display.insert("end -1 chars", str(name))
+    info_display.insert(3.0, str(info))
 
 
 
@@ -47,7 +61,7 @@ if __name__ == "__main__":
     root.title("Electronics Documentation")
     root.geometry("400x250")
     root.resizable(False, False)
-    
+  
     top_frame = Frame(root)
     top_frame.pack(side = "top", fill=BOTH)
     bottom_frame = Frame(root, width=100)
@@ -58,31 +72,32 @@ if __name__ == "__main__":
     bottom_row = Frame(bottom_frame)
     bottom_row.pack(side = BOTTOM)
     
-    listbox = Listbox(top_frame, width = 250, height = 15)
-    listbox.pack()
+    info_display = Text(top_frame, wrap=WORD, width = 250, height = 15)
+    info_display.pack()
     
     wire = Button(top_row, text = "Wire", command = wire_button_press)
     wire.pack(side = LEFT, padx=3, pady=1)
     
-    switch = Button(top_row, text = "Switch")
+    switch = Button(top_row, text = "Switch", command = switch_button_press)
     switch.pack(side = LEFT, padx=3, pady=1)
 
-    resistor = Button(top_row, text = "Resistor")
+    resistor = Button(top_row, text = "Resistor", command = resistor_button_press)
     resistor.pack(side = LEFT, padx=3, pady=1)
 
-    capacitor = Button(top_row, text = "Capacitor")
+    capacitor = Button(top_row, text = "Capacitor", command = capacitor_button_press)
     capacitor.pack(side = LEFT, padx=3, pady=1)
 
-    light_bulb = Button(bottom_row, text = "Light Bulb")
+    light_bulb = Button(bottom_row, text = "Light Bulb", command = light_bulb_button_press)
     light_bulb.pack(side = LEFT, padx=3, pady=1)
 
-    inductor = Button(bottom_row, text = "Inductor")
-    inductor.pack(side = LEFT, padx=3, pady=1)
+    # inductor = Button(bottom_row, text = "Inductor", command = diode_button_press)
+    # inductor.pack(side = LEFT, padx=3, pady=1)
 
-    diode = Button(bottom_row, text = "Diode")
+    diode = Button(bottom_row, text = "Diode", command = diode_button_press)
     diode.pack(side = LEFT, padx=3, pady=1)
 
-    transistor = Button(bottom_row, text = "Transistor")
+    transistor = Button(bottom_row, text = "Transistor", command = transistor_button_press)
     transistor.pack(side = LEFT, padx=3, pady=1)
     
     root.mainloop()
+    
