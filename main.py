@@ -54,8 +54,6 @@ def transistor_button_press():
     info_display.insert(3.0, str(info))
 
 
-
-
 if __name__ == "__main__":
     root = Tk()
     root.title("Electronics Documentation")
